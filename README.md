@@ -2,16 +2,14 @@
 
 source : web programming unpas (Youtube)
 
-1. DOM selector
-   1. script.js
+1. DOM selector(script.js & script2.js)
    1. document.getElementById
    1. document.getElementsByTagName
    1. document.getElementsByClassName
-   1. script.js
    1. document.querySelector
    1. document.querySelectorAll
-2. DOM manipulation (script3.js)
-   1. script3.js
+2. DOM manipulation (script3.js & script4.js)
+   - modification element
    1. document.innerHTML
    1. document.style.(property CSS)
    1. document.setAttribute
@@ -23,7 +21,7 @@ source : web programming unpas (Youtube)
    1. document.classList.item
    1. document.classList.contains
    1. document.classList.replace
-   1. script4.js
+   - modification node
    1. document.createElement
    1. document.createTextNode
    1. document.appendChild
