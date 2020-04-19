@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h2>Menghitung Luas dan Keliling Persegi</h2>
+    <table>
+      <tr>
+        <td>Panjang</td>
+        <td><input type="number" id="dt01" onchange="proses();" /></td>
+        <td><span id="pesan1" style="color: red;"></span></td>
+      </tr>
+
+      <tr>
+        <td>Lebar</td>
+        <td><input type="number" id="dt02" onchange="proses();" /></td>
+        <td><span id="pesan2" style="color: red;"></span></td>
+      </tr>
+      <tr>
+        <td>Luas</td>
+        <td><span id="luas"></span></td>
+        <td><span id="pesan3"></span></td>
+      </tr>
+      <tr>
+        <td>Keliling</td>
+        <td><span id="Keliling"></span></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button onclick="hitung();" id="tombol">Hitung</button></td>
+      </tr>
+    </table>
+
+    <script>
+      var satu, dua, hasil, button;
+      //   var button = document.getElementById("tombol");
+      //   function tombol() {
+      //     if (satu < 0) {
+      //       button.disabled = true;
+      //     }
+      //     if (dua < 0) {
+      //       button.disabled = true;
+      //     }
+      //     if (satu >= 0) {
+      //       proses++;
+      //     }
+      //     if (dua >= 0) {
+      //       proses++;
+      //     }
+      //   }
+      function proses() {
+        satu = document.getElementById("dt01").value;
+        dua = document.getElementById("dt02").value;
+        button = document.getElementById("tombol");
+        if (satu < 0) {
+          document.getElementById("pesan1").innerHTML = "Tidak Boleh Negatif";
+          button.disabled = true;
+        } else if (dua < 0) {
+          document.getElementById("pesan2").innerHTML = "Tidak Boleh Negatif";
+          button.disabled = true;
+        } else {
+          button.disabled = false;
+        }
+      }
+
+      function hitung() {
+        satu = document.getElementById("dt01").value;
+
+        dua = document.getElementById("dt02").value;
+
+        luas = satu * dua;
+        Keliling = 2 * satu + 2 * dua;
+        document.getElementById("luas").innerHTML = luas;
+        document.getElementById("Keliling").innerHTML = Keliling;
+      }
+    </script>
+  </body>
+</html>
